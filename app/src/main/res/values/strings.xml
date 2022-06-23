@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TrabalhoGrupoN2</string>
+    <string name="titulo_prod_1">Funko Pop Arlequina</string>
+    <string name="preco_prod_1">R$ 139,00</string>
+    <string name="botao_comprar">Comprar</string>
+
+    <string name="form_titulo">Título</string>
+    <string name="form_preco">Preço</string>
+    <string name="form_desc">Descrição</string>
+    <string name="form_img">Imagem</string>
+    <string name="login">Login</string>
+
+    <string-array name="nome_produtos_txt">
+        <item>Funko Pop! Arlequina</item>
+        <item>Quebra-cabeça Noite Estrelada</item>
+        <item>Jogo de Cartas Uno</item>
+        <item>Jogo Banco Imobiliário</item>
+        <item>Jogo Pula Pirata</item>
+        <item>Funko Pop! Darth Vader</item>
+        <item>Jurassic World Velociraptor Blue</item>
+    </string-array>
+    <string-array name="preco_produtos_txt">
+        <item>139,90</item>
+        <item>49,90</item>
+        <item>14,99</item>
+        <item>93,90</item>
+        <item>56,90</item>
+        <item>249,90</item>
+        <item>95,90</item>
+    </string-array>
+
+</resources>

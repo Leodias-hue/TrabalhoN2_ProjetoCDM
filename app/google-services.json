@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1042462373132",
+    "project_id": "trabalhogrupon2",
+    "storage_bucket": "trabalhogrupon2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042462373132:android:ae8c3bf124263031fd8529",
+        "android_client_info": {
+          "package_name": "com.example.trabalhogrupon2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042462373132-nfcefooj2bh96sv9l6onaelb9kmscfrb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcy4YG9xlaou_ngq6eVVPdWun7Cf1gCyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042462373132-nfcefooj2bh96sv9l6onaelb9kmscfrb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
