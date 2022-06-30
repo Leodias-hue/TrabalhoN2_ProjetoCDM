@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabalhoGrupoN2">
         <activity
-            android:name=".ListaProdutos"
+            android:name=".ListaCategorias"
             android:exported="false" />
         <activity
             android:name=".Cadastro"
