@@ -8,52 +8,76 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdapterRVCategorias extends RecyclerView.Adapter<AdapterRVCategorias.ViewHolder> {
+public class AdapterRVCategorias extends RecyclerView.Adapter<AdapterRVCategorias.MyViewHolder>  {
 
+    ArrayList<Categorias> list;
     Context context;
-    List<Categorias> categoriasList;
 
-    public AdapterRVCategorias(Context context, List<Categorias> categoriasList) {
+    public AdapterRVCategorias(Context context, ArrayList<Categorias> list){
+        this.list = list;
         this.context = context;
-        this.categoriasList = categoriasList;
     }
 
+/*
+    @NonNull
+    @Override
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(context).inflate(R.layout.categorias_main, parent, false);
+        return new MyViewHolder(v);
+    }*/
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.categorias_main, parent, false));
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view
+                = LayoutInflater.from(context)
+                .inflate(R.layout.categorias_main, parent, false);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Glide.with(context).load(categoriasList.get(position).getImg_url()).into(holder.catImg);
-        holder.nome.setText(categoriasList.get(position).getNome());
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        Categorias categorias = list.get(position);
+        holder.nomeCategoria.setText(categorias.getNome());
+        //holder.imgCategoria.setImageBitmap(categorias.getImg_url());
     }
 
     @Override
     public int getItemCount() {
-        return categoriasList.size();
+        return list.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        ImageView catImg;
-        TextView nome;
+        TextView nomeCategoria;
+        ImageView imgCategoria;
 
+        public MyViewHolder(@NonNull View itemView) {
 
-        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            catImg = itemView.findViewById(R.id.cat_img);
-            nome = itemView.findViewById(R.id.cat_nome);
+
+            nomeCategoria = itemView.findViewById(R.id.cat_nome);
+            //imgCategoria = itemView.findViewById(R.id.cat_img);
+
         }
     }
+
 }
